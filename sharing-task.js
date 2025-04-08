@@ -35,8 +35,10 @@ reusable functions that solve specific tasks. This activity encourages:
 // 2. Format the output string properly.
 // 3. Capitalize the role if needed.
 // 4. Return the result.
-
-
+function attendee(name, role) {
+    return `Name: ${name}, Role: ${role}`
+}
+console.log(attendee("Alice", "Speaker"));
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
 // ============================================
@@ -51,6 +53,16 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
 
+function calculateEventCost(attendees, costPerAttendee) {
+    let totalCostOfAttendes = attendees * costPerAttendee;
+    if (attendees > 100) {
+        return `The 10% discount was applied, and the cost is now ${totalCostOfAttendes * 0.9}`;
+    } else {
+        return `There is no discount at this time,  the total cost is ${totalCostOfAttendes}`;
+    }
+}
+
+console.log(calculateEventCost(101, 10));
 
 // ============================================
 // 🧩 Task 3: Validate Email
@@ -64,13 +76,18 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
 
-
+function isValidEmail(email) {
+    return email.includes("@") && email.includes(".");
+}
+console.log(isValidEmail("random@gmail.com"));
 // ============================================
 // 🧠 Collaborative Steps
 // ============================================
 
 // 📌 Design Phase:
 // - Brainstorm function requirements: What inputs and outputs are needed?
+//   inputs: name, role, attendees, costPerAttendee, email
+//   outputs: formatted string, total cost, boolean
 // - Assign roles within your team:
 //   ▸ Pseudocode Writer
 //   ▸ Initial Coder
@@ -83,9 +100,28 @@ reusable functions that solve specific tasks. This activity encourages:
 // 🧪 Testing Phase:
 // - Each member writes test cases for each function
 // - Use console.log() to test different inputs and edge cases
+// - Example test cases:
+//console.log(attendee("Medina", "Programmer")); // Expected: Name: Medina, Role: Programmer
+//console.log(calculateEventCost(99, 10)); // Expected: There is no discount at this time,  the total cost is 990
+//console.log(isValidEmail("random.gmail.com")); // Expected: false
 
 // 🎤 Presentation Phase:
 // - Share your functions with the class
 // - Explain how your team approached the design and testing process
 
 // ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+
+//needs to be commented out or else it will throw the above statment into an error error
+
+function calculateEventCost(attendees, costPerAttendee, discount) {
+    let totalCostOfAttendes = attendees * costPerAttendee;
+    let discountAmount = discount
+    if (attendees > 100) {
+
+        return `The discount was applied, and the cost is now ${totalCostOfAttendes * discountAmount}`;
+    } else {
+        return `There is no discount at this time,  the total cost is ${totalCostOfAttendes}`;
+    }
+}
+
+console.log(calculateEventCost(101, 10, 0.5));
