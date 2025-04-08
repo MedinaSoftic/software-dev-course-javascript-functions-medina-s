@@ -113,15 +113,15 @@ console.log(isValidEmail("random@gmail.com"));
 
 //needs to be commented out or else it will throw the above statment into an error error
 
-function calculateEventCost(attendees, costPerAttendee, discount) {
-    let totalCostOfAttendes = attendees * costPerAttendee;
-    let discountAmount = discount
-    if (attendees > 100) {
+// function calculateEventCost(attendees, costPerAttendee, discount) {
+//     let totalCostOfAttendes = attendees * costPerAttendee;
+//     let discountAmount = discount
+//     if (attendees > 100) {
 
-        return `The discount was applied, and the cost is now ${totalCostOfAttendes * discountAmount}`;
-    } else {
-        return `There is no discount at this time,  the total cost is ${totalCostOfAttendes}`;
-    }
-}
+//         return `The discount was applied, and the cost is now ${totalCostOfAttendes * discountAmount}`;
+//     } else {
+//         return `There is no discount at this time,  the total cost is ${totalCostOfAttendes}`;
+//     }
+// }
 
-console.log(calculateEventCost(101, 10, 0.5));
+// console.log(calculateEventCost(101, 10, 0.5));
